@@ -1,0 +1,26 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixDll", "MatrixDll\MatrixDll.vcxproj", "{B4AF4C0D-827C-4877-9D5D-15F0AE8DF864}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixTest", "MatrixTest\MatrixTest.vcxproj", "{08A110A2-F608-4012-A8B9-3A87A49D5CB1}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{B4AF4C0D-827C-4877-9D5D-15F0AE8DF864}.Debug|Win32.ActiveCfg = Debug|Win32
+		{B4AF4C0D-827C-4877-9D5D-15F0AE8DF864}.Debug|Win32.Build.0 = Debug|Win32
+		{B4AF4C0D-827C-4877-9D5D-15F0AE8DF864}.Release|Win32.ActiveCfg = Release|Win32
+		{B4AF4C0D-827C-4877-9D5D-15F0AE8DF864}.Release|Win32.Build.0 = Release|Win32
+		{08A110A2-F608-4012-A8B9-3A87A49D5CB1}.Debug|Win32.ActiveCfg = Debug|Win32
+		{08A110A2-F608-4012-A8B9-3A87A49D5CB1}.Debug|Win32.Build.0 = Debug|Win32
+		{08A110A2-F608-4012-A8B9-3A87A49D5CB1}.Release|Win32.ActiveCfg = Release|Win32
+		{08A110A2-F608-4012-A8B9-3A87A49D5CB1}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
