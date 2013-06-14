@@ -12,7 +12,7 @@ private:
 	size_t col;
 public:
 	_CMATRIX CMatrix(size_t fuck_row, size_t fuck_col); 
-	_CMATRIX ~CMatrix();
+	_CMATRIX virtual ~CMatrix();
 	_CMATRIX void AssignValue(float *pSourceVale);
 	_CMATRIX void InverseMatrix();
 	_CMATRIX void PrintMatrix();
