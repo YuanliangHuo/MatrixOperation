@@ -15,10 +15,17 @@ int main()
 	}
 
 	CMatrix MyMatrix(rows, cols);
-	MyMatrix.AssignValue(pSourceData);
-	MyMatrix.PrintMatrix();
-	MyMatrix.InverseMatrix();
-	MyMatrix.PrintMatrix();
+	MyMatrix.Assign(pSourceData);
+	MyMatrix.Dump(std::cout);
+	MyMatrix.Transpose();
+	MyMatrix.Dump(std::cout);
+
+	//Asign
+	CMatrix MyMatrix2(rows, cols);
+	MyMatrix2 = MyMatrix;
+	MyMatrix2.Dump(std::cout);
+
+	//std::cout << MyMatrix2 << std::endl; 
 
 	delete []pSourceData;
 

@@ -1,3 +1,4 @@
+#include <iostream>
 
 #ifdef MATRIXCLASS_H
 #define _CMATRIX __declspec(dllexport)
@@ -13,8 +14,10 @@ private:
 public:
 	_CMATRIX CMatrix(size_t fuck_row, size_t fuck_col); 
 	_CMATRIX virtual ~CMatrix();
-	_CMATRIX void AssignValue(float *pSourceVale);
-	_CMATRIX void InverseMatrix();
-	_CMATRIX void PrintMatrix();
+	_CMATRIX CMatrix& operator=(const CMatrix &other);
+	//_CMATRIX friend std::ostream& operator<<(std::ostream& out, const CMatrix &other);
+	_CMATRIX void Assign(float *pSourceVale);
+	_CMATRIX void Transpose();
+	_CMATRIX void Dump(std::ostream &s);
 
 };
