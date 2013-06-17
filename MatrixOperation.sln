@@ -4,6 +4,9 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixDll", "MatrixDll\MatrixDll.vcxproj", "{B4AF4C0D-827C-4877-9D5D-15F0AE8DF864}"
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "MatrixTest", "MatrixTest\MatrixTest.vcxproj", "{08A110A2-F608-4012-A8B9-3A87A49D5CB1}"
+	ProjectSection(ProjectDependencies) = postProject
+		{B4AF4C0D-827C-4877-9D5D-15F0AE8DF864} = {B4AF4C0D-827C-4877-9D5D-15F0AE8DF864}
+	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

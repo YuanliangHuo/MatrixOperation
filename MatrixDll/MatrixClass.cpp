@@ -19,6 +19,12 @@ _CMATRIX CMatrix::CMatrix(size_t fuck_row, size_t fuck_col)
 }
 
 
+_CMATRIX CMatrix::CMatrix()
+{
+	row = 0;
+	col = 0;
+}
+
 _CMATRIX CMatrix::~CMatrix()
 {
 	for (size_t idx = 0; idx != row; ++idx)
@@ -119,5 +125,46 @@ _CMATRIX void CMatrix::Dump(std::ostream &s)
 		std::cout << std::endl;
 	}
 	std::cout << std::endl;
+}
+
+
+//operator "()" overload
+_CMATRIX float CMatrix::operator ()(const int &nRow, const int &nCol)
+{
+	if(nRow >= row || nCol >= col)
+	{
+		std::cout << "Invalid reference, exceed the matrix boundary!" << std::endl;
+		return -1;
+	}
+
+	else
+		return pMatrix[nRow][nCol];
+}
+
+
+//operator "==" overload
+_CMATRIX bool CMatrix::operator ==(const CMatrix &rightMatrix)
+{
+	if(rightMatrix.row != row || rightMatrix.col != col)
+	{
+		std::cout << "Dimensions do not match" << std::endl;
+		return false;
+	}
+	else
+	{
+		for(int row_idx = 0; row_idx != row; ++row_idx)
+		{
+			for(int col_idx = 0; col_idx != col; ++col_idx)
+			{
+				if(pMatrix[row_idx][col_idx] != rightMatrix.pMatrix[row_idx][col_idx])
+				{
+					std::cout << "Elements do not match" << std::endl;
+					return false;
+				}
+			}
+		}
+
+		return true;
+	}
 }
 

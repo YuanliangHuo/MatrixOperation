@@ -27,6 +27,16 @@ int main()
 
 	//std::cout << MyMatrix2 << std::endl; 
 
+	//test the operator "()"
+	std::cout << "MyMatrix(0,1): " << MyMatrix(0,1) << std::endl << std:: endl;
+	//test the operator "=="
+	CMatrix TestMatrix;
+	TestMatrix = MyMatrix;
+	if(TestMatrix == MyMatrix)
+	{
+		std::cout << "MyMatrix2 and MyMatrix is equal!" << std::endl;
+	}
+
 	delete []pSourceData;
 
 	system("pause");
