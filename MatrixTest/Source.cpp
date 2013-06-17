@@ -25,6 +25,30 @@ int main()
 	MyMatrix2 = MyMatrix;
 	MyMatrix2.Dump(std::cout);
 
+
+	CMatrix OneMatrix(rows, cols);
+	OneMatrix.Assign(pSourceData);
+	float* p1 = NULL;
+	float *p2 = NULL;
+	p1 = OneMatrix.GetRow(rows - 1);
+	for(int i = 0; i < cols; i++)
+	{
+		std::cout << p1[i] <<"  ";
+	}
+	std::cout << std::endl;
+	delete []p1;
+	p2 = OneMatrix.GetCol(cols - 1);
+	for(int i = 0; i < rows; i++)
+	{
+		std::cout << p2[i] <<" ";
+	}
+	std::cout << std::endl;
+	delete []p2;
+	const CMatrix TwoMatrix(rows,cols);
+	CMatrix ThreeMatrix(TwoMatrix);
+	ThreeMatrix.Dump(std::cout);
+
+
 	//std::cout << MyMatrix2 << std::endl; 
 
 	//test the operator "()"

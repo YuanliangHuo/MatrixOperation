@@ -17,6 +17,9 @@ public:
 	_CMATRIX CMatrix();
 	_CMATRIX virtual ~CMatrix();
 	_CMATRIX CMatrix& operator=(const CMatrix &other);
+	_CMATRIX CMatrix(const CMatrix &Other);
+	_CMATRIX float* GetRow(size_t row);
+	_CMATRIX float* GetCol(size_t col);
 	//_CMATRIX friend std::ostream& operator<<(std::ostream& out, const CMatrix &other);
 	_CMATRIX void Assign(float *pSourceVale);
 	_CMATRIX void Transpose();

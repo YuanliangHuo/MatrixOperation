@@ -65,6 +65,53 @@ _CMATRIX CMatrix& CMatrix::operator=(const CMatrix &other)
 	return *this;
 }
 
+_CMATRIX CMatrix::CMatrix(const CMatrix &Other)
+{
+	row = Other.row;
+	col = Other.col;
+	pMatrix = new float *[row];
+	for (size_t idx = 0; idx < row; ++idx)
+	{
+		pMatrix[idx] = new float[col];
+	}
+	 *this = Other;
+}
+
+_CMATRIX float* CMatrix::GetRow(size_t rows)
+{
+	float *p = new float[col];
+	if(pMatrix[rows] == NULL)
+	{
+		std::cout << "该行为空！" << std::endl;
+		exit(0);
+	}
+	else
+	{
+		for(int i = 0; i < col; i++)
+		{
+			p[i] = pMatrix[rows][i];
+		}
+	}
+	return p;
+}
+
+_CMATRIX float* CMatrix::GetCol(size_t cols)
+{
+	float *q = new float[row];
+	if(pMatrix == NULL)
+	{
+		std::cout << "该列为空！" << std::endl;
+		exit(-1);
+	}
+	else
+	{
+		for(int i = 0; i < row; i++)
+		{
+			q[i] = pMatrix[i][cols];
+		}
+	}
+	return q;
+}
 
 //std::ostream& operator<<(std::ostream& out, const CMatrix &other)
 //{
